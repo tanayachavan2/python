@@ -13,5 +13,5 @@ print(positive)
 default_age=20
 user=0
 
-ouput=user or default_age
+output=user or default_age
 print(output)
