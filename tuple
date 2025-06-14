@@ -1,0 +1,26 @@
+#creating tuples
+student_tuple=('Tanaya','Kashish','Riya',20, 23, 2025)
+print(student_tuple)
+
+student_tuple='Tanaya','Kashish','Riya',20, 23, 2025
+print(student_tuple)
+
+student_tuple=()
+print(len(student_tuple))
+
+#accessing tuple elements
+student_tuple=(22, 30, 40, 50)
+print(student_tuple[0]*2 ,student_tuple[1]-2 , student_tuple[2]+40 , student_tuple[3]/2)
+
+#adding items to tuples and tuples to list
+student_tuple=(10,20,30)
+tuple2=student_tuple
+print(tuple2)
+
+student_tuple += (40,50,60)
+print(student_tuple)
+print(tuple2)
+
+list=[1,2,3,4,5]
+list += (6,7,8)
+print(list)
