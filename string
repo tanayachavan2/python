@@ -1,0 +1,28 @@
+# Greets the user with their name
+name="Tanaya "
+nm=input("please enetr your name:")
+print("{}!".format(name))
+print(f"{name}!")
+print(f"Hello,{name}!!")
+print(f"Hello,{nm}")
+
+#variable assigning and Handles and displays age inputs
+agee=input("please enter your age:")
+age=22
+age=str(age)
+print(" I am "+agee)
+print(" I am "+str(age))
+
+# Uses string formatting techniques (`f-strings`, `.format()`) Displays information about a movie
+title="Joker"
+director="jsons"
+released="2025"
+print(f"{title} directored by {director}, and relased in{released}")
+
+
+#list  Reverses and prints elements from a list of friends
+# Shows how to work with indexing and list length
+friends=["Tanaya","Shivani","Madhura"]
+friends.reverse()
+print(friends [0],friends [2])
+print(len(friends))
