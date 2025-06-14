@@ -1,0 +1,67 @@
+contact_book = {}
+
+def show_menu():
+    print("\n📒 CONTACT BOOK MENU")
+    print("1. Add Contact")
+    print("2. View All Contacts")
+    print("3. Search Contact")
+    print("4. Delete Contact")
+    print("5. Exit")
+
+def add_contact():
+    name = input("Enter name: ").strip().title()
+    phone = input("Enter phone number: ").strip()
+    email = input("Enter email: ").strip().lower()
+
+    if name in contact_book:
+        print("⚠️ Contact already exists.")
+    else:
+        contact_book[name] = {'Phone': phone, 'Email': email}
+        print(f"✅ Contact for {name} added.")
+
+def view_contacts():
+    if not contact_book:
+        print("📭 No contacts saved yet.")
+    else:
+        print("\n📋 All Contacts:")
+        for name, info in contact_book.items():
+            print(f"👤 {name} | 📞 {info['Phone']} | 📧 {info['Email']}")
+
+def search_contact():
+    name = input("🔍 Enter name to search: ").strip().title()
+    if name in contact_book:
+        info = contact_book[name]
+        print(f"👤 {name} | 📞 {info['Phone']} | 📧 {info['Email']}")
+    else:
+        print("❌ Contact not found.")
+
+def delete_contact():
+    name = input("🗑 Enter name to delete: ").strip().title()
+    if name in contact_book:
+        confirm = input(f"Are you sure you want to delete {name}? (yes/no): ").lower()
+        if confirm == 'yes':
+            del contact_book[name]
+            print(f"❌ Contact for {name} deleted.")
+        else:
+            print("Cancelled deletion.")
+    else:
+        print("❌ Contact not found.")
+
+# --- Main Program Loop ---
+while True:
+    show_menu()
+    choice = input("Choose an option (1-5): ").strip()
+
+    if choice == '1':
+        add_contact()
+    elif choice == '2':
+        view_contacts()
+    elif choice == '3':
+        search_contact()
+    elif choice == '4':
+        delete_contact()
+    elif choice == '5':
+        print("👋 Exiting Contact Book. Stay connected!")
+        break
+    else:
+        print("⚠️ Invalid choice. Please select between 1–5.")
