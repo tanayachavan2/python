@@ -1,0 +1,15 @@
+#swapping values via packing and unpacking
+num1=99
+num2=100
+num1, num2=(num2,num1)
+print(f'number1={num1}; number2={num2}')
+
+#unpacking string list and sequence produced by range
+first,second='Hi'
+print(f'{first}   {second}')
+
+number1 ,number2, number3 =[2,3,5]
+print(f'{number1} {number2} {number3}')
+
+number1, number2 ,  number3 = range(10, 40, 10)
+print(f'{number1} {number2} {number3}')
