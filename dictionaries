@@ -1,0 +1,43 @@
+country_codes={'Finland':'fi' ,'India':'in','South Africa':'za','Nepal':'np'}
+print(country_codes)
+
+print(len(country_codes))
+
+
+if country_codes:
+    print('country_codes is not empty')
+else:
+    print('country_codes is empty')
+
+#to clear dictionary key values pairs use clear method
+country_codes.clear()
+
+
+numerals={'I':1 ,'II':2 ,'III':3 ,'IV':4 ,'V':5}
+print(numerals['V']) #accessing
+
+numerals['L']=6 #adding key value
+print(numerals)
+
+del numerals['I']#removing key value
+print(numerals)
+#OR can use numerals.pop('I')
+
+#testing dictionary contain specified key value 
+#'II' in numerals
+
+#'I'in numerals
+
+#'I' not in numerals
+
+
+numerals={'I':1 ,'II':2 ,'III':3 ,'IV':4 ,'V':5}
+for roman_words in numerals.keys():
+    print( roman_words, end=' ')
+
+for roman_numerals in numerals.values():
+    print( roman_numerals, end=' ')
+
+numerals_view = numerals.keys()
+for key in numerals_view:
+    print(key, end=' ')
