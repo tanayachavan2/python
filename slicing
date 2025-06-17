@@ -1,0 +1,30 @@
+numbers = [10, 2, 33, 4, 54, 69 ,7, 80 ]
+numbers.sort()
+print(numbers)
+
+numbers.sort(reverse=True)
+print(numbers)
+
+ascending_numbers= sorted(numbers)
+print(ascending_numbers)
+
+letters='Sharad'
+asc_letter=sorted(letters)
+print(asc_letter)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 3 ]
+numbers *= 2
+print(numbers)
+
+numbers.index(5,7)
+
+
+sample_list=[]
+s='abc'
+sample_list.extend(s)
+
+print(sample_list)
+
+t=(1,2,3)
+sample_list.extend(t)
+print(sample_list)
