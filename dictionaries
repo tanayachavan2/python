@@ -41,3 +41,32 @@ for roman_numerals in numerals.values():
 numerals_view = numerals.keys()
 for key in numerals_view:
     print(key, end=' ')
+
+#Dictionary Comparison
+country_capitals={'Belgium':'Brussels' , 'Haiti':'Port-au-Prince'}
+country_capitals2={'Nepal':'Kathmandu','Urugay':'Montevideo'}
+country_capitals3={'Belgium':'Brussels' , 'Haiti':'Port-au-Prince'}
+
+print(country_capitals==country_capitals2)
+print(country_capitals!=country_capitals2)
+print(country_capitals3==country_capitals2)
+print(country_capitals3==country_capitals)
+
+#Dictionary of Students Grades
+grades_book={
+    'Sakshi':[92,85,100],
+    'Shruti':[83,95,77],
+    'Anushka':[91,90,76],
+    'Tanaya':[97,98,99]
+}
+
+all_grades_total=0
+all_grades_count=0
+
+for name, grades in grades_book.items():
+    total=sum(grades)
+    print(f'Average for {name} is {total/len(grades)}:.2f')
+    all_grades_total += total
+    all_grades_count += len(grades)
+
+print(f"Class's average is:{all_grades_total/all_grades_count:.2f}")
